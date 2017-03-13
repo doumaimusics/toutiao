@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		
+		.box {
+			width: 300px;
+			height: 100px;
+			border: 1px solid black;
+			margin: 50px auto;
+			position: relative;
+			overflow: hidden;
+			
+		}
+		
+		.box .log {
+			width: 50px;
+			height: 50px;
+			background: #ccc;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			/*cursor:-webkit-grab;*/
+			/*cursor:-webkit-grabbing;*/
+			/*cursor:-webkit-zoom-in;*/
+			cursor:-webkit-zoom-out;
+		}
+		
+		.box .gd-box {
+			width: 250px;
+			position: absolute;
+			left: 50px;
+
+			
+		}
+		
+		.box .gd-box .list {
+			width: 100%;
+
+		}
+		
+		.box .gd-box .list li {
+			height: 50px;
+			line-height: 50px;
+		}
+		
+		.box .gd-box .list li dl {
+			width: 100%;
+			overflow: hidden;
+		}
+		
+		.box .gd-box .list li dl dt,
+		dd {
+			float: left;
+		}
+	</style>
+
+	<body>
+		<div class="box">
+			<div class="log"></div>
+			<div class="gd-box">
+				<ul class="list">
+					<li class="cell">
+						<dl class="cleartfix">
+							<dt>01-02</dt>
+							<dd>
+								<img src="img/flag01.jpg" alt="" />
+								<span class="u-text">R***ard</span>
+								<i class="u-money">$2,030.00</i>
+							</dd>
+						</dl>
+
+						<dl class="cleartfix">
+							<dt>01-02</dt>
+							<dd>
+								<img src="img/flag01.jpg" alt="" />
+								<span class="u-text">R***ard</span>
+								<i class="u-money">$2,030.00</i>
+							</dd>
+						</dl>
+					</li>
+					<li class="cell">
+						<dl class="cleartfix">
+							<dt>01-02</dt>
+							<dd>
+								<img src="img/flag01.jpg" alt="" />
+								<span class="u-text">R***ard</span>
+								<i class="u-money">$2,030.00</i>
+							</dd>
+						</dl>
+
+						<dl class="cleartfix">
+							<dt>01-02</dt>
+							<dd>
+								<img src="img/flag01.jpg" alt="" />
+								<span class="u-text">R***ard</span>
+								<i class="u-money">$2,030.00</i>
+							</dd>
+						</dl>
+					</li>
+					<li class="cell">
+						<dl class="cleartfix">
+							<dt>01-02</dt>
+							<dd>
+								<img src="img/flag01.jpg" alt="" />
+								<span class="u-text">R***ard</span>
+								<i class="u-money">$2,030.00</i>
+							</dd>
+						</dl>
+
+						<dl class="cleartfix">
+							<dt>01-02</dt>
+							<dd>
+								<img src="img/flag01.jpg" alt="" />
+								<span class="u-text">R***ard</span>
+								<i class="u-money">$2,030.00</i>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script>
+//	function AutoScroll(obj){
+//		$(obj).find('ul:first').animate({
+//			marginTop:'-150px';
+//		},500,function(){
+//			$(this).css({
+//				marginTop:'0px'
+//			}).find('li:first').appendTo(this);
+//		})
+//	}
+		function AutoScroll(obj) {
+		$(obj).find("ul:first").animate({
+			marginTop: "-1.35rem"
+		}, 500, function() {
+			$(this).css({
+				marginTop: "0px"
+			}).find("li:first").appendTo(this);
+		});
+	}
+	$(document).ready(function() {
+		setInterval('AutoScroll(".gd-box")', 3000);
+	});
+</script>
